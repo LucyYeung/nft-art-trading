@@ -1,0 +1,647 @@
+---
+title: 藝術品系列
+layout: ./app/layout.ejs
+engine: ejs
+current: series
+---
+
+<main>
+  <div class="container grid grid-cols-12 pb-10 lg:pt-10 lg:pb-20">
+    <section class="col-span-3 hidden divide-y divide-lightGray border bg-white pr-3 lg:block">
+      <div id="network" data-accordion="collapse" data-active-classes="bg-white">
+        <div id="network-heading" class="p-6 pr-5 pb-4">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between text-left font-bold text-black"
+            data-accordion-target="#network-body"
+            aria-expanded="true"
+            aria-controls="network-body"
+          >
+            <span>網路</span>
+            <svg data-accordion-icon class="h-6 w-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div id="network-body" class="hidden" aria-labelledby="network-heading">
+          <div class="p-6 pt-0">
+            <div class="mb-2 flex items-center justify-between">
+              <label for="ethereum-checkbox" class="font-noto font-normal">以太坊</label>
+              <input id="ethereum-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" />
+            </div>
+            <div class="flex items-center justify-between">
+              <label for="bnb-checkbox" class="font-noto font-normal">BNB 智能鏈</label>
+              <input id="bnb-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" checked />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="status" data-accordion="collapse" data-active-classes="bg-white">
+        <div id="status-heading" class="p-6 pr-5 pb-4">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between text-left font-bold text-black"
+            data-accordion-target="#status-body"
+            aria-expanded="true"
+            aria-controls="status-body"
+          >
+            <span>狀態</span>
+            <svg data-accordion-icon class="h-6 w-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div id="status-body" class="hidden" aria-labelledby="status-heading">
+          <div class="p-6 pt-0">
+            <div class="mb-2 flex items-center justify-between">
+              <label for="showOnly-checkbox" class="font-noto font-normal">僅展示</label>
+              <input id="showOnly-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" />
+            </div>
+            <div class="flex items-center justify-between">
+              <label for="inAuction-checkbox" class="font-noto font-normal">拍賣中</label>
+              <input id="inAuction-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" checked />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="price" data-accordion="collapse" data-active-classes="bg-white">
+        <div id="price-heading" class="p-6 pr-5 pb-4">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between text-left font-bold text-black"
+            data-accordion-target="#price-body"
+            aria-expanded="true"
+            aria-controls="price-body"
+          >
+            <span>價格</span>
+            <svg data-accordion-icon class="h-6 w-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div id="price-body" class="hidden p-6 pt-0" aria-labelledby="price-heading">
+          <div class="flex flex-col justify-between gap-x-2 xl:flex-row xl:items-center">
+            <select name="currenct" id="currency" class="mb-4 xl:mb-0">
+              <option value="ETH">ETH</option>
+              <option value="BNB">BNB</option>
+            </select>
+            <div class="flex items-center justify-between gap-x-2">
+              <input type="text" class="w-16 flex-shrink" />
+              <span>－</span>
+              <input type="text" class="w-16 flex-shrink" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pb-3">
+        <p class="px-6 pt-6 font-bold text-darkGray">屬性</p>
+        <div id="breed" data-accordion="collapse" data-active-classes="bg-white">
+          <div id="breed-heading" class="py-3 pl-6 pr-5">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between text-left font-bold text-black"
+              data-accordion-target="#breed-body"
+              aria-expanded="true"
+              aria-controls="breed-body"
+            >
+              <span>品種</span>
+              <svg data-accordion-icon class="h-6 w-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div id="breed-body" class="mb-3 hidden" aria-labelledby="breed-heading">
+            <div class="px-6">
+              <div class="mb-2 flex items-center justify-between">
+                <label for="starling-checkbox" class="font-noto font-normal">八哥</label>
+                <input id="starling-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" />
+              </div>
+              <div class="mb-2 flex items-center justify-between">
+                <label for="budgerigar-checkbox" class="font-noto font-normal">虎皮鸚鵡</label>
+                <input id="budgerigar-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" checked />
+              </div>
+              <div class="mb-2 flex items-center justify-between">
+                <label for="peacebird-checkbox" class="font-noto font-normal">太平鳥</label>
+                <input id="peacebird-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" />
+              </div>
+              <div class="flex items-center justify-between">
+                <label for="throstle-checkbox" class="font-noto font-normal">畫眉鳥</label>
+                <input id="throstle-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="birdNum" data-accordion="collapse" data-active-classes="bg-white">
+          <div id="birdNum-heading" class="py-3 pl-6 pr-5">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between text-left font-bold text-black"
+              data-accordion-target="#birdNum-body"
+              aria-expanded="false"
+              aria-controls="birdNum-body"
+            >
+              <span>鳥的數量</span>
+              <svg data-accordion-icon class="h-6 w-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div id="birdNum-body" class="hidden" aria-labelledby="birdNum-heading"></div>
+        </div>
+        <div id="haveFlowers" data-accordion="collapse" data-active-classes="bg-white">
+          <div id="haveFlowers-heading" class="py-3 pl-6 pr-5">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between text-left font-bold text-black"
+              data-accordion-target="#haveFlowers-body"
+              aria-expanded="false"
+              aria-controls="haveFlowers-body"
+            >
+              <span>是否有花草</span>
+              <svg data-accordion-icon class="h-6 w-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div id="haveFlowers-body" class="hidden" aria-labelledby="haveFlowers-heading"></div>
+        </div>
+        <div id="birdColor" data-accordion="collapse" data-active-classes="bg-white">
+          <div id="birdColor-heading" class="py-3 pl-6 pr-5">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between text-left font-bold text-black"
+              data-accordion-target="#birdColor-body"
+              aria-expanded="false"
+              aria-controls="birdColor-body"
+            >
+              <span>鳥的顏色</span>
+              <svg data-accordion-icon class="h-6 w-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div id="birdColor-body" class="hidden" aria-labelledby="birdColor-heading"></div>
+        </div>
+      </div>
+    </section>
+    <section class="col-span-12 lg:col-span-9">
+      <div class="mb-10 grid items-end md:grid-cols-9">
+        <div class="md:col-span-5 md:px-3">
+          <div class="mb-1 flex">
+            <img class="h-8 w-8 rounded-full" src="./assets/images/artist01.jpg" alt="artist01" />
+            <p class="ml-4 text-base-sm">Michael</p>
+          </div>
+          <h3 class="mb-2 text-3xl font-bold">我家外面的鳥</h3>
+          <p class="mb-4 md:mb-0">家門前每天都有不同的小鳥，大多數的小鳥都有特殊能力，特殊能力是什麼我就不說了，希望大家能從作品感受到小鳥的快樂。</p>
+        </div>
+        <div class="md:col-span-4 md:pl-3">
+          <ul class="flex justify-around border bg-white">
+            <li class="relative flex-grow py-4 text-center">
+              <p class="mb-2">項目</p>
+              <p class="text-2xl leading-8">6.4 k</p>
+              <div class="absolute top-0 right-0 h-4 w-px bg-black"></div>
+              <div class="absolute bottom-0 right-0 h-4 w-px bg-black"></div>
+            </li>
+            <li class="relative flex-grow py-4 text-center">
+              <p class="mb-2">擁有者</p>
+              <p class="text-2xl leading-8">2.5 k</p>
+              <div class="absolute top-0 right-0 h-4 w-px bg-black"></div>
+              <div class="absolute bottom-0 right-0 h-4 w-px bg-black"></div>
+            </li>
+            <li class="relative flex-grow py-4 text-center">
+              <p class="mb-2">底價</p>
+              <p class="mr-2 flex items-center justify-center md:mr-0">
+                <i class="fa-solid fa-sort"></i>
+                <span class="ml-2 text-xl leading-8">1.38 k</span>
+              </p>
+              <div class="absolute top-0 right-0 h-4 w-px bg-black"></div>
+              <div class="absolute bottom-0 right-0 h-4 w-px bg-black"></div>
+            </li>
+            <li class="relative flex-grow py-4 text-center">
+              <p class="mb-2">總額</p>
+              <p class="text-2xl leading-8">2.8 k</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mb-6 flex justify-end md:mb-10">
+        <button class="border bg-white py-2 px-9">
+          <p>最新上架<i class="fa-solid fa-sort ml-2"></i></p>
+        </button>
+      </div>
+      <div class="grid">
+        <div class="grid-masonry" data-masonry='{"percentPosition": true }'>
+          <div onclick="location.href='artWork.html';" class="w-1/2 cursor-pointer break-inside-avoid p-3 md:cursor-default lg:w-1/3 xl:pb-12">
+            <div class="group relative">
+              <img class="w-full bg-white p-4" src="./assets/images/art20.jpg" alt="art20" />
+              <div class="absolute top-0 left-0 hidden h-full w-full bg-black bg-opacity-70 p-4 md:group-hover:block">
+                <div class="h-full border border-white p-4 text-white">
+                  <p>3/14情人節外面剛好有兩隻鳥，也在過情人節。</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-base-sm">300</span>
+                  </p>
+                </div>
+              </div>
+              <a href="./artWork.html" class="more absolute bottom-8 right-8 hidden bg-white md:group-hover:block"
+                >MORE
+                <div class="corner"></div>
+              </a>
+            </div>
+            <p class="py-4 font-noto font-bold lg:border-b">這兩隻也太像企鵝了吧</p>
+          </div>
+          <div onclick="location.href='artWork.html';" class="w-1/2 cursor-pointer break-inside-avoid p-3 md:cursor-default lg:w-1/3 xl:pb-12">
+            <div class="group relative">
+              <img class="w-full bg-white p-4" src="./assets/images/art21.jpg" alt="art21" />
+              <div class="absolute top-0 left-0 hidden h-full w-full bg-black bg-opacity-70 p-4 md:group-hover:block">
+                <div class="h-full border border-white p-4 text-white">
+                  <p>3/14情人節外面剛好有兩隻鳥，也在過情人節。</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-base-sm">300</span>
+                  </p>
+                </div>
+              </div>
+              <a href="./artWork.html" class="more absolute bottom-8 right-8 hidden bg-white md:group-hover:block"
+                >MORE
+                <div class="corner"></div>
+              </a>
+            </div>
+            <p class="py-4 font-noto font-bold lg:border-b">兩情相悅</p>
+          </div>
+          <div onclick="location.href='artWork.html';" class="w-1/2 cursor-pointer break-inside-avoid p-3 md:cursor-default lg:w-1/3 xl:pb-12">
+            <div class="group relative">
+              <img class="w-full bg-white p-4" src="./assets/images/art22.jpg" alt="art22" />
+              <div class="absolute top-0 left-0 hidden h-full w-full bg-black bg-opacity-70 p-4 md:group-hover:block">
+                <div class="h-full border border-white p-4 text-white">
+                  <p>3/14情人節外面剛好有兩隻鳥，也在過情人節。</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-base-sm">300</span>
+                  </p>
+                </div>
+              </div>
+              <a href="./artWork.html" class="more absolute bottom-8 right-8 hidden bg-white md:group-hover:block"
+                >MORE
+                <div class="corner"></div>
+              </a>
+            </div>
+            <p class="py-4 font-noto font-bold lg:border-b">群聚的小鳥們</p>
+          </div>
+          <div onclick="location.href='artWork.html';" class="w-1/2 cursor-pointer break-inside-avoid p-3 md:cursor-default lg:w-1/3 xl:pb-12">
+            <div class="group relative">
+              <img class="w-full bg-white p-4" src="./assets/images/art23.jpg" alt="art23" />
+              <div class="absolute top-0 left-0 hidden h-full w-full bg-black bg-opacity-70 p-4 md:group-hover:block">
+                <div class="h-full border border-white p-4 text-white">
+                  <p>3/14情人節外面剛好有兩隻鳥，也在過情人節。</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-base-sm">300</span>
+                  </p>
+                </div>
+              </div>
+              <a href="./artWork.html" class="more absolute bottom-8 right-8 hidden bg-white md:group-hover:block"
+                >MORE
+                <div class="corner"></div>
+              </a>
+            </div>
+            <p class="py-4 font-noto font-bold lg:border-b">與你分享的快樂勝過獨自擁有</p>
+          </div>
+          <div onclick="location.href='artWork.html';" class="w-1/2 cursor-pointer break-inside-avoid p-3 md:cursor-default lg:w-1/3 xl:pb-12">
+            <div class="group relative">
+              <img class="w-full bg-white p-4" src="./assets/images/art24.jpg" alt="art24" />
+              <div class="absolute top-0 left-0 hidden h-full w-full bg-black bg-opacity-70 p-4 md:group-hover:block">
+                <div class="h-full border border-white p-4 text-white">
+                  <p>3/14情人節外面剛好有兩隻鳥，也在過情人節。</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-base-sm">300</span>
+                  </p>
+                </div>
+              </div>
+              <a href="./artWork.html" class="more absolute bottom-8 right-8 hidden bg-white md:group-hover:block"
+                >MORE
+                <div class="corner"></div>
+              </a>
+            </div>
+            <p class="py-4 font-noto font-bold lg:border-b">會唱metal的鳥</p>
+          </div>
+          <div onclick="location.href='artWork.html';" class="w-1/2 cursor-pointer break-inside-avoid p-3 md:cursor-default lg:w-1/3 xl:pb-12">
+            <div class="group relative">
+              <img class="w-full bg-white p-4" src="./assets/images/art25.jpg" alt="art25" />
+              <div class="absolute top-0 left-0 hidden h-full w-full bg-black bg-opacity-70 p-4 md:group-hover:block">
+                <div class="h-full border border-white p-4 text-white">
+                  <p>3/14情人節外面剛好有兩隻鳥，也在過情人節。</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-base-sm">300</span>
+                  </p>
+                </div>
+              </div>
+              <a href="./artWork.html" class="more absolute bottom-8 right-8 hidden bg-white md:group-hover:block"
+                >MORE
+                <div class="corner"></div>
+              </a>
+            </div>
+            <p class="py-4 font-noto font-bold lg:border-b">一大一小兩個恰恰好</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <button class="fixed left-1/2 bottom-4 w-44 -translate-x-1/2 bg-black py-2 text-white md:hidden" data-modal-toggle="filter-modal">
+    篩選條件 2
+  </button>
+  <!-- filter modal -->
+  <div
+    id="filter-modal"
+    tabindex="-1"
+    class="fixed top-0 right-0 left-0 z-50 hidden h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden bg-black bg-opacity-65 md:inset-0"
+    aria-modal="true"
+    role="dialog"
+  >
+    <div class="relative h-full w-full p-0">
+      <!-- Modal content -->
+      <div class="relative flex h-full w-full flex-col items-stretch justify-between bg-white shadow">
+        <button
+          type="button"
+          class="absolute top-3 right-2.5 ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 hover:text-primary"
+          data-modal-toggle="filter-modal"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <!-- Modal header -->
+        <div>
+          <div class="border-b py-4">
+            <p class="text-center text-xl">篩選條件</p>
+          </div>
+          <!-- Modal body -->
+          <div class="col-span-3 divide-y divide-lightGray bg-white pr-3">
+            <div id="network-m" data-accordion="collapse" data-active-classes="bg-white">
+              <div id="network-m-heading" class="p-6 pr-5 pb-4">
+                <button
+                  type="button"
+                  class="flex w-full items-center justify-between text-left font-bold text-black"
+                  data-accordion-target="#network-m-body"
+                  aria-expanded="true"
+                  aria-controls="network-m-body"
+                >
+                  <span>網路</span>
+                  <svg
+                    data-accordion-icon
+                    class="h-6 w-6 shrink-0 rotate-180"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <div id="network-m-body" class="hidden" aria-labelledby="network-m-heading">
+                <div class="p-6 pt-0">
+                  <div class="mb-2 flex items-center justify-between">
+                    <label for="ethereum-checkbox" class="font-noto font-normal">以太坊</label>
+                    <input id="ethereum-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" />
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <label for="bnb-checkbox" class="font-noto font-normal">BNB 智能鏈</label>
+                    <input id="bnb-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" checked />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="status-m" data-accordion="collapse" data-active-classes="bg-white">
+              <div id="status-m-heading" class="p-6 pr-5 pb-4">
+                <button
+                  type="button"
+                  class="flex w-full items-center justify-between text-left font-bold text-black"
+                  data-accordion-target="#status-m-body"
+                  aria-expanded="true"
+                  aria-controls="status-m-body"
+                >
+                  <span>狀態</span>
+                  <svg
+                    data-accordion-icon
+                    class="h-6 w-6 shrink-0 rotate-180"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <div id="status-m-body" class="hidden" aria-labelledby="status-m-heading">
+                <div class="p-6 pt-0">
+                  <div class="mb-2 flex items-center justify-between">
+                    <label for="showOnly-checkbox" class="font-noto font-normal">僅展示</label>
+                    <input id="showOnly-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" />
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <label for="inAuction-checkbox" class="font-noto font-normal">拍賣中</label>
+                    <input id="inAuction-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" checked />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="price-m" data-accordion="collapse" data-active-classes="bg-white">
+              <div id="price-m-heading" class="p-6 pr-5 pb-4">
+                <button
+                  type="button"
+                  class="flex w-full items-center justify-between text-left font-bold text-black"
+                  data-accordion-target="#price-m-body"
+                  aria-expanded="true"
+                  aria-controls="price-m-body"
+                >
+                  <span>價格</span>
+                  <svg
+                    data-accordion-icon
+                    class="h-6 w-6 shrink-0 rotate-180"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <div id="price-m-body" class="hidden p-6 pt-0" aria-labelledby="price-m-heading">
+                <div class="flex items-center gap-x-2">
+                  <select name="currenct" id="currency">
+                    <option value="ETH">ETH</option>
+                    <option value="BNB">BNB</option>
+                  </select>
+                  <input type="text" class="w-16 flex-shrink" />
+                  <span>－</span>
+                  <input type="text" class="w-16 flex-shrink" />
+                </div>
+              </div>
+            </div>
+            <div class="pb-3">
+              <p class="px-6 pt-6 font-bold text-darkGray">屬性</p>
+              <div id="breed-m" data-accordion="collapse" data-active-classes="bg-white">
+                <div id="breed-m-heading" class="py-3 pl-6 pr-5">
+                  <button
+                    type="button"
+                    class="flex w-full items-center justify-between text-left font-bold text-black"
+                    data-accordion-target="#breed-m-body"
+                    aria-expanded="true"
+                    aria-controls="breed-m-body"
+                  >
+                    <span>品種</span>
+                    <svg
+                      data-accordion-icon
+                      class="h-6 w-6 shrink-0 rotate-180"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div id="breed-m-body" class="mb-3 hidden" aria-labelledby="breed-m-heading">
+                  <div class="px-6">
+                    <div class="mb-2 flex items-center justify-between">
+                      <label for="starling-checkbox" class="font-noto font-normal">八哥</label>
+                      <input id="starling-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" />
+                    </div>
+                    <div class="mb-2 flex items-center justify-between">
+                      <label for="budgerigar-checkbox" class="font-noto font-normal">虎皮鸚鵡</label>
+                      <input id="budgerigar-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" checked />
+                    </div>
+                    <div class="mb-2 flex items-center justify-between">
+                      <label for="peacebird-checkbox" class="font-noto font-normal">太平鳥</label>
+                      <input id="peacebird-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" />
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <label for="throstle-checkbox" class="font-noto font-normal">畫眉鳥</label>
+                      <input id="throstle-checkbox" type="checkbox" class="h-4 w-4 border-gray-300 text-black" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="birdNum-m" data-accordion="collapse" data-active-classes="bg-white">
+                <div id="birdNum-m-heading" class="py-3 pl-6 pr-5">
+                  <button
+                    type="button"
+                    class="flex w-full items-center justify-between text-left font-bold text-black"
+                    data-accordion-target="#birdNum-m-body"
+                    aria-expanded="false"
+                    aria-controls="birdNum-m-body"
+                  >
+                    <span>鳥的數量</span>
+                    <svg data-accordion-icon class="h-6 w-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div id="birdNum-m-body" class="hidden" aria-labelledby="birdNum-m-heading"></div>
+              </div>
+              <div id="haveFlowers-m" data-accordion="collapse" data-active-classes="bg-white">
+                <div id="haveFlowers-m-heading" class="py-3 pl-6 pr-5">
+                  <button
+                    type="button"
+                    class="flex w-full items-center justify-between text-left font-bold text-black"
+                    data-accordion-target="#haveFlowers-m-body"
+                    aria-expanded="false"
+                    aria-controls="haveFlowers-m-body"
+                  >
+                    <span>是否有花草</span>
+                    <svg data-accordion-icon class="h-6 w-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div id="haveFlowers-m-body" class="hidden" aria-labelledby="haveFlowers-m-heading"></div>
+              </div>
+              <div id="birdColor-m" data-accordion="collapse" data-active-classes="bg-white">
+                <div id="birdColor-m-heading" class="py-3 pl-6 pr-5">
+                  <button
+                    type="button"
+                    class="flex w-full items-center justify-between text-left font-bold text-black"
+                    data-accordion-target="#birdColor-m-body"
+                    aria-expanded="false"
+                    aria-controls="birdColor-m-body"
+                  >
+                    <span>鳥的顏色</span>
+                    <svg data-accordion-icon class="h-6 w-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div id="birdColor-m-body" class="hidden" aria-labelledby="birdColor-m-heading"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center bg-white">
+            <button
+              type="button"
+              class="wallet-close m-4 mt-0 block w-full border bg-primary py-2 text-lg text-white md:w-[168px]"
+              data-modal-toggle="filter-modal"
+            >
+              確認
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

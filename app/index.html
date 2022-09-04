@@ -1,0 +1,539 @@
+---
+title: 首頁
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<main>
+  <section class="mb-10 md:pt-10 md:mb-20">
+    <div class="md:container">
+      <div class="md:flex md:border-x md:border-t">
+        <div class="flex md:w-2/3">
+          <div class="hidden w-[100px] items-center justify-center bg-black text-white [writing-mode:vertical-lr] md:flex">
+            <p class="mb-4 text-5xl-sm">Recommend</p>
+            <p class="hidden text-xl-sm lg:block">推 薦 系 列</p>
+          </div>
+          <div>
+            <img src="./assets/images/art01.jpg" alt="art01" />
+          </div>
+        </div>
+        <div class="grid place-content-center border-b-2 bg-white py-8 md:w-1/3 md:border-b md:py-3 lg:py-8">
+          <div class="container">
+            <h4 class="mb-2 text-lg-sm">Kemus Wu</h4>
+            <h3 class="mb-6 text-2xl font-bold xl:text-5xl">瞳孔:流動的脈絡</h3>
+            <p class="mb-6">眼睛，總是吸引著我們的注意力，看、被看，也許眼睛裡有著從另一個世界看我們的世界。</p>
+            <a href="./series.html" class="more button group w-[132px]">
+              MORE
+              <div class="corner"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="md:container xl:flex">
+      <div class="w-full flex-row-reverse border-b-2 md:flex md:border-x md:border-b xl:w-1/2">
+        <div class="md:flex md:w-1/2">
+          <img class="object-cover xl:w-[329px]" src="./assets/images/art02.jpg" alt="art02" />
+        </div>
+        <div class="w-full bg-white pt-8 pb-6 md:w-full md:pt-12">
+          <div class="container">
+            <h4 class="mb-2 text-lg-sm">Joanne</h4>
+            <h3 class="mb-6 text-2xl font-bold md:text-3xl">海洋波度</h3>
+            <p class="mb-6">海洋的奧秘向我們揭示了深不可測的一面，它的深度——反映了我們的恐懼、同時也吸引著我們。</p>
+            <a href="./series.html" class="more button group w-[132px]">
+              MORE
+              <div class="corner"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex-row-reverse border-b-2 md:flex md:border-x md:border-b xl:w-1/2 xl:border-l-0">
+        <div class="md:flex md:w-1/2">
+          <img class="object-cover xl:w-[329px]" src="./assets/images/art21.jpg" alt="art21" />
+        </div>
+        <div class="w-full bg-white pt-8 pb-6 md:w-full md:pt-12">
+          <div class="container">
+            <h4 class="mb-2 text-lg-sm">Michael</h4>
+            <h3 class="mb-6 text-2xl font-bold md:text-3xl">我家窗前的鳥</h3>
+            <p class="mb-6">家門前每天都有不同的小鳥，大多數的小鳥都有特殊能力，特殊能力是什麼我就不說了，希望大家能從作品感受到小鳥的快樂。</p>
+            <a href="./series.html" class="more button group w-[132px]">
+              MORE
+              <div class="corner"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mb-10 md:mb-20">
+    <div class="container">
+      <div class="mb-6 flex items-end justify-between border-b md:mb-12">
+        <p class="mb-2">
+          <span class="align-text-bottom text-3xl-sm md:text-5xl-sm">Ranking</span>
+          <span class="ml-4 hidden text-xl font-bold md:inline-block">市價排行榜</span>
+        </p>
+        <a href="./ranking.html" class="more group relative border-0">
+          MORE
+          <div class="corner"></div>
+        </a>
+      </div>
+      <div class="grid gap-x-6 gap-y-4 md:grid-cols-3">
+        <div class="relative flex items-center border bg-white md:flex-col">
+          <div
+            class="top-0 left-0 z-10 flex items-center justify-center bg-white px-2 font-paytone text-2xl-sm md:absolute md:h-16 md:w-16 md:border-r md:border-b md:text-3xl"
+          >
+            1
+          </div>
+          <div class="group relative">
+            <img
+              class="h-[92px] w-[87px] border-x object-cover object-top group-hover:brightness-50 md:h-[374px] md:w-full md:border-0 md:border-b"
+              src="./assets/images/art04.jpg"
+              alt="art04"
+            />
+            <a
+              href="./ranking.html"
+              class="absolute top-0 right-0 hidden h-full w-full items-center justify-center bg-black bg-opacity-70 text-white group-hover:flex group-hover:md:hidden"
+              >MORE
+            </a>
+            <div class="corner hidden group-hover:block"></div>
+            <a href="./ranking.html" class="more group absolute bottom-0 right-0 hidden bg-white md:group-hover:block"
+              >MORE
+              <div class="corner hidden group-hover:block"></div>
+            </a>
+          </div>
+          <div class="flex h-full w-full flex-col justify-between divide-y">
+            <h3 class="my-auto px-2 py-4 text-lg font-bold">散步遇到的女人</h3>
+            <div class="flex justify-between border-t px-2 py-2">
+              <h4 class="text-base-sm">Zoe Jiang</h4>
+              <p class="flex items-center">
+                <i class="fa-solid fa-sort"></i>
+                <span class="ml-2 text-base-sm">300</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="relative flex items-center border bg-white md:flex-col">
+          <div
+            class="top-0 left-0 z-10 flex items-center justify-center bg-white px-2 font-paytone text-2xl-sm md:absolute md:h-16 md:w-16 md:border-r md:border-b md:text-3xl"
+          >
+            2
+          </div>
+          <div class="group relative">
+            <img
+              class="h-[92px] w-[87px] border-x object-cover object-top group-hover:brightness-50 md:h-[374px] md:w-full md:border-0 md:border-b"
+              src="./assets/images/art05.jpg"
+              alt="art05"
+            />
+            <a
+              href="./ranking.html"
+              class="absolute top-0 right-0 hidden h-full w-full items-center justify-center bg-black bg-opacity-70 text-white group-hover:flex group-hover:md:hidden"
+              >MORE
+            </a>
+            <div class="corner hidden group-hover:block"></div>
+            <a href="./ranking.html" class="more group absolute bottom-0 right-0 hidden bg-white md:group-hover:block"
+              >MORE
+              <div class="corner hidden group-hover:block"></div>
+            </a>
+          </div>
+          <div class="flex h-full w-full flex-col justify-between divide-y">
+            <h3 class="my-auto px-2 py-4 text-lg font-bold">爆炸頭的母親</h3>
+            <div class="flex justify-between border-t px-2 py-2">
+              <h4 class="text-base-sm">Yui</h4>
+              <p class="flex items-center">
+                <i class="fa-solid fa-sort"></i>
+                <span class="ml-2 text-base-sm">300</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="relative flex items-center border bg-white md:flex-col">
+          <div
+            class="top-0 left-0 z-10 flex items-center justify-center bg-white px-2 font-paytone text-2xl-sm md:absolute md:h-16 md:w-16 md:border-r md:border-b md:text-3xl"
+          >
+            3
+          </div>
+          <div class="group relative">
+            <img
+              class="h-[92px] w-[87px] border-x object-cover object-top group-hover:brightness-50 md:h-[374px] md:w-full md:border-0 md:border-b"
+              src="./assets/images/art06.jpg"
+              alt="art06"
+            />
+            <a
+              href="./ranking.html"
+              class="absolute top-0 right-0 hidden h-full w-full items-center justify-center bg-black bg-opacity-70 text-white group-hover:flex group-hover:md:hidden"
+              >MORE
+            </a>
+            <div class="corner hidden group-hover:block"></div>
+            <a href="./ranking.html" class="more group absolute bottom-0 right-0 hidden bg-white md:group-hover:block"
+              >MORE
+              <div class="corner hidden group-hover:block"></div>
+            </a>
+          </div>
+          <div class="flex h-full w-full flex-col justify-between divide-y">
+            <h3 class="my-auto px-2 py-4 text-lg font-bold">夏天的時候</h3>
+            <div class="flex justify-between border-t px-2 py-2">
+              <h4 class="text-base-sm">Bug Lin</h4>
+              <p class="flex items-center">
+                <i class="fa-solid fa-sort"></i>
+                <span class="ml-2 text-base-sm">300</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative flex items-center border bg-white">
+          <div class="top-0 left-0 z-10 flex items-center justify-center bg-white px-2 font-paytone text-2xl-sm">4</div>
+          <div class="group relative">
+            <img class="h-[92px] w-[87px] border-x object-cover object-top group-hover:brightness-50" src="./assets/images/art29.jpg" alt="art29" />
+            <a
+              href="./ranking.html"
+              class="absolute top-0 right-0 hidden h-full w-full items-center justify-center bg-black bg-opacity-70 text-white group-hover:flex"
+              >MORE
+            </a>
+            <div class="corner hidden group-hover:block"></div>
+          </div>
+          <div class="flex h-full w-full flex-col justify-between divide-y">
+            <h3 class="my-auto truncate px-2 py-4 font-bold lg:text-lg">追求者送我的花</h3>
+            <div class="flex justify-between border-t px-2 py-2">
+              <h4 class="text-base-sm">Michael</h4>
+              <p class="flex items-center">
+                <i class="fa-solid fa-sort"></i>
+                <span class="ml-2 text-base-sm">300</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="relative flex items-center border bg-white">
+          <div class="top-0 left-0 z-10 flex items-center justify-center bg-white px-2 font-paytone text-2xl-sm">5</div>
+          <div class="group relative">
+            <img class="h-[92px] w-[87px] border-x object-cover object-top group-hover:brightness-50" src="./assets/images/art07.jpg" alt="art07" />
+            <a
+              href="./ranking.html"
+              class="absolute top-0 right-0 hidden h-full w-full items-center justify-center bg-black bg-opacity-70 text-white group-hover:flex"
+              >MORE
+            </a>
+            <div class="corner hidden group-hover:block"></div>
+          </div>
+          <div class="flex h-full w-full flex-col justify-between divide-y">
+            <h3 class="my-auto truncate px-2 py-4 font-bold lg:text-lg">今天釣到的魚</h3>
+            <div class="flex justify-between border-t px-2 py-2">
+              <h4 class="text-base-sm">Wei JJ</h4>
+              <p class="flex items-center">
+                <i class="fa-solid fa-sort"></i>
+                <span class="ml-2 text-base-sm">300</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="relative flex items-center border bg-white">
+          <div class="top-0 left-0 z-10 flex items-center justify-center bg-white px-2 font-paytone text-2xl-sm">6</div>
+          <div class="group relative">
+            <img class="h-[92px] w-[87px] border-x object-cover object-top group-hover:brightness-50" src="./assets/images/art08.jpg" alt="art08" />
+            <a
+              href="./ranking.html"
+              class="absolute top-0 right-0 hidden h-full w-full items-center justify-center bg-black bg-opacity-70 text-white group-hover:flex"
+              >MORE
+            </a>
+            <div class="corner hidden group-hover:block"></div>
+          </div>
+          <div class="flex h-full w-full flex-col justify-between divide-y">
+            <h3 class="my-auto truncate px-2 py-4 font-bold lg:text-lg">人生中的貓咪們</h3>
+            <div class="flex justify-between border-t px-2 py-2">
+              <h4 class="text-base-sm">Even Lai</h4>
+              <p class="flex items-center">
+                <i class="fa-solid fa-sort"></i>
+                <span class="ml-2 text-base-sm">300</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pb-10 md:pb-20">
+    <div class="container">
+      <div class="mb-6 flex items-end justify-between border-b md:mb-12">
+        <p class="mb-2">
+          <span class="align-text-bottom text-3xl-sm md:text-5xl-sm">Artist</span>
+          <span class="ml-4 hidden text-xl font-bold md:inline-block">熱門藝術家</span>
+        </p>
+        <a href="./artist.html" class="more group relative border-0">
+          MORE
+          <div class="corner"></div>
+        </a>
+      </div>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper pb-6 lg:pb-12">
+          <div class="swiper-slide">
+            <div class="relative">
+              <img src="./assets/images/artist01.jpg" alt="artist01" />
+              <a href="./artist.html" class="more blurContent group absolute bottom-2 right-2 bg-white lg:bottom-6 lg:right-6">
+                MORE
+                <div class="corner"></div>
+              </a>
+            </div>
+            <div class="blurContent absolute top-6 left-0 w-full px-6 text-7xl text-white lg:w-[258px]">Michael</div>
+            <div class="blurContent bottom-6 left-6 mt-4 w-full bg-white bg-opacity-85 p-6 lg:absolute lg:mt-0 lg:w-60 xl:w-[307px]">
+              ​喜愛大自然，創作題材常見大山、大水、花草與樹木。
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <img src="./assets/images/artist02.jpg" alt="artist02" />
+              <a href="./artist.html" class="more blurContent group absolute bottom-2 right-2 bg-white lg:bottom-6 lg:right-6">
+                MORE
+                <div class="corner"></div>
+              </a>
+            </div>
+            <div class="blurContent absolute top-6 left-0 w-full px-6 text-7xl text-white lg:w-[258px]">Antony Wu</div>
+            <div class="blurContent bottom-6 left-6 mt-4 w-full bg-white bg-opacity-85 p-6 lg:absolute lg:mt-0 lg:w-60 xl:w-[307px]">
+              ​喜愛大自然，創作題材常見大山、大水、花草與樹木。
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <img src="./assets/images/artist03.jpg" alt="artist03" />
+              <a href="./artist.html" class="more blurContent group absolute bottom-2 right-2 bg-white lg:bottom-6 lg:right-6">
+                MORE
+                <div class="corner"></div>
+              </a>
+            </div>
+            <div class="blurContent absolute top-6 left-0 w-full px-6 text-7xl text-white lg:w-[258px]">Barret</div>
+            <div class="blurContent bottom-6 left-6 mt-4 w-full bg-white bg-opacity-85 p-6 lg:absolute lg:mt-0 lg:w-60 xl:w-[307px]">
+              ​喜愛大自然，創作題材常見大山、大水、花草與樹木。
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <img src="./assets/images/artist04.jpg" alt="artist04" />
+              <a href="./artist.html" class="more blurContent group absolute bottom-2 right-2 bg-white lg:bottom-6 lg:right-6">
+                MORE
+                <div class="corner"></div>
+              </a>
+            </div>
+            <div class="blurContent absolute top-6 left-0 w-full px-6 text-7xl text-white lg:w-[258px]">aki</div>
+            <div class="blurContent bottom-6 left-6 mt-4 w-full bg-white bg-opacity-85 p-6 lg:absolute lg:mt-0 lg:w-60 xl:w-[307px]">
+              ​喜愛大自然，創作題材常見大山、大水、花草與樹木。
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <img src="./assets/images/artist05.jpg" alt="artist05" />
+              <a href="./artist.html" class="more blurContent group absolute bottom-2 right-2 bg-white lg:bottom-6 lg:right-6">
+                MORE
+                <div class="corner"></div>
+              </a>
+            </div>
+            <div class="blurContent absolute top-6 left-0 w-full px-6 text-7xl text-white lg:w-[258px]">Joyce</div>
+            <div class="blurContent bottom-6 left-6 mt-4 w-full bg-white bg-opacity-85 p-6 lg:absolute lg:mt-0 lg:w-60 xl:w-[307px]">
+              ​喜愛大自然，創作題材常見大山、大水、花草與樹木。
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <section class="mb-10 md:mb-20">
+    <div class="container">
+      <div class="mb-6 flex items-end justify-between border-b md:mb-12">
+        <p class="mb-2">
+          <span class="align-text-bottom text-3xl-sm md:text-5xl-sm">Artwork</span>
+          <span class="ml-4 hidden text-xl font-bold md:inline-block">最新藝術品</span>
+        </p>
+        <a href="./explore.html" class="more group relative border-0">
+          MORE
+          <div class="corner"></div>
+        </a>
+      </div>
+      <div class="grid-masonry" data-masonry='{"percentPosition": true }'>
+        <div onclick="location.href='artWork.html';" class="w-1/2 cursor-pointer break-inside-avoid p-3 md:cursor-default lg:w-1/3 xl:w-1/4 xl:pb-12">
+          <div class="group relative">
+            <img class="w-full bg-white p-4" src="./assets/images/art09.jpg" alt="art09" />
+            <div class="absolute top-0 left-0 hidden h-full w-full bg-black bg-opacity-70 p-4 md:group-hover:block">
+              <div class="h-full border border-white p-4 text-white">
+                <p>唯一想擁有的人，唯一不可以擁有的</p>
+                <p class="flex items-center">
+                  <i class="fa-solid fa-sort"></i>
+                  <span class="ml-2 text-base-sm">300</span>
+                </p>
+              </div>
+            </div>
+            <a href="./artWork.html" class="more absolute bottom-8 right-8 hidden bg-white md:group-hover:block"
+              >MORE
+              <div class="corner"></div>
+            </a>
+          </div>
+          <p class="py-4 font-bold lg:border-b font-noto">區塊戀-他的私生活</p>
+        </div>
+        <div onclick="location.href='artWork.html';" class="w-1/2 cursor-pointer break-inside-avoid p-3 md:cursor-default lg:w-1/3 xl:w-1/4 xl:pb-12">
+          <div class="group relative">
+            <img class="w-full bg-white p-4" src="./assets/images/art10.jpg" alt="art10" />
+            <div class="absolute top-0 left-0 hidden h-full w-full bg-black bg-opacity-70 p-4 md:group-hover:block">
+              <div class="h-full border border-white p-4 text-white">
+                <p>唯一想擁有的人，唯一不可以擁有的</p>
+                <p class="flex items-center">
+                  <i class="fa-solid fa-sort"></i>
+                  <span class="ml-2 text-base-sm">300</span>
+                </p>
+              </div>
+            </div>
+            <a href="./artWork.html" class="more absolute bottom-8 right-8 hidden bg-white md:group-hover:block"
+              >MORE
+              <div class="corner"></div>
+            </a>
+          </div>
+          <p class="py-4 font-bold lg:border-b font-noto">夏娃的醜聞</p>
+        </div>
+        <div onclick="location.href='artWork.html';" class="w-1/2 cursor-pointer break-inside-avoid p-3 md:cursor-default lg:w-1/3 xl:w-1/4 xl:pb-12">
+          <div class="group relative">
+            <img class="w-full bg-white p-4" src="./assets/images/art02.jpg" alt="art02" />
+            <div class="absolute top-0 left-0 hidden h-full w-full bg-black bg-opacity-70 p-4 md:group-hover:block">
+              <div class="h-full border border-white p-4 text-white">
+                <p>唯一想擁有的人，唯一不可以擁有的</p>
+                <p class="flex items-center">
+                  <i class="fa-solid fa-sort"></i>
+                  <span class="ml-2 text-base-sm">300</span>
+                </p>
+              </div>
+            </div>
+            <a href="./artWork.html" class="more absolute bottom-8 right-8 hidden bg-white md:group-hover:block"
+              >MORE
+              <div class="corner"></div>
+            </a>
+          </div>
+          <p class="py-4 font-bold lg:border-b font-noto">藍色啤酒海</p>
+        </div>
+        <div onclick="location.href='artWork.html';" class="w-1/2 cursor-pointer break-inside-avoid p-3 md:cursor-default lg:w-1/3 xl:w-1/4 xl:pb-12">
+          <div class="group relative">
+            <img class="w-full bg-white p-4" src="./assets/images/art11.jpg" alt="art11" />
+            <div class="absolute top-0 left-0 hidden h-full w-full bg-black bg-opacity-70 p-4 md:group-hover:block">
+              <div class="h-full border border-white p-4 text-white">
+                <p>唯一想擁有的人，唯一不可以擁有的</p>
+                <p class="flex items-center">
+                  <i class="fa-solid fa-sort"></i>
+                  <span class="ml-2 text-base-sm">300</span>
+                </p>
+              </div>
+            </div>
+            <a href="./artWork.html" class="more absolute bottom-8 right-8 hidden bg-white md:group-hover:block"
+              >MORE
+              <div class="corner"></div>
+            </a>
+          </div>
+          <p class="py-4 font-bold lg:border-b font-noto">沒有人愛我</p>
+        </div>
+        <div onclick="location.href='artWork.html';" class="w-1/2 cursor-pointer break-inside-avoid p-3 md:cursor-default lg:w-1/3 xl:w-1/4 xl:pb-12">
+          <div class="group relative">
+            <img class="w-full bg-white p-4" src="./assets/images/art12.jpg" alt="art12" />
+            <div class="absolute top-0 left-0 hidden h-full w-full bg-black bg-opacity-70 p-4 md:group-hover:block">
+              <div class="h-full border border-white p-4 text-white">
+                <p>唯一想擁有的人，唯一不可以擁有的</p>
+                <p class="flex items-center">
+                  <i class="fa-solid fa-sort"></i>
+                  <span class="ml-2 text-base-sm">300</span>
+                </p>
+              </div>
+            </div>
+            <a href="./artWork.html" class="more absolute bottom-8 right-8 hidden bg-white md:group-hover:block"
+              >MORE
+              <div class="corner"></div>
+            </a>
+          </div>
+          <p class="py-4 font-bold lg:border-b font-noto">不哭不哭眼淚是珍珠</p>
+        </div>
+        <div onclick="location.href='artWork.html';" class="w-1/2 cursor-pointer break-inside-avoid p-3 md:cursor-default lg:w-1/3 xl:w-1/4 xl:pb-12">
+          <div class="group relative">
+            <img class="w-full bg-white p-4" src="./assets/images/art27.jpg" alt="art27" />
+            <div class="absolute top-0 left-0 hidden h-full w-full bg-black bg-opacity-70 p-4 md:group-hover:block">
+              <div class="h-full border border-white p-4 text-white">
+                <p>唯一想擁有的人，唯一不可以擁有的</p>
+                <p class="flex items-center">
+                  <i class="fa-solid fa-sort"></i>
+                  <span class="ml-2 text-base-sm">300</span>
+                </p>
+              </div>
+            </div>
+            <a href="./artWork.html" class="more absolute bottom-8 right-8 hidden bg-white md:group-hover:block"
+              >MORE
+              <div class="corner"></div>
+            </a>
+          </div>
+          <p class="py-4 font-bold lg:border-b font-noto">我真的受傷了</p>
+        </div>
+        <div onclick="location.href='artWork.html';" class="w-1/2 cursor-pointer break-inside-avoid p-3 md:cursor-default lg:w-1/3 xl:w-1/4 xl:pb-12">
+          <div class="group relative">
+            <img class="w-full bg-white p-4" src="./assets/images/art03.jpg" alt="art03" />
+            <div class="absolute top-0 left-0 hidden h-full w-full bg-black bg-opacity-70 p-4 md:group-hover:block">
+              <div class="h-full border border-white p-4 text-white">
+                <p>唯一想擁有的人，唯一不可以擁有的</p>
+                <p class="flex items-center">
+                  <i class="fa-solid fa-sort"></i>
+                  <span class="ml-2 text-base-sm">300</span>
+                </p>
+              </div>
+            </div>
+            <a href="./artWork.html" class="more absolute bottom-8 right-8 hidden bg-white md:group-hover:block"
+              >MORE
+              <div class="corner"></div>
+            </a>
+          </div>
+          <p class="py-4 font-bold lg:border-b font-noto">十分鐘就到</p>
+        </div>
+        <div onclick="location.href='artWork.html';" class="w-1/2 cursor-pointer break-inside-avoid p-3 md:cursor-default lg:w-1/3 xl:w-1/4 xl:pb-12">
+          <div class="group relative">
+            <img class="w-full bg-white p-4" src="./assets/images/art04.jpg" alt="art04" />
+            <div class="absolute top-0 left-0 hidden h-full w-full bg-black bg-opacity-70 p-4 md:group-hover:block">
+              <div class="h-full border border-white p-4 text-white">
+                <p>唯一想擁有的人，唯一不可以擁有的</p>
+                <p class="flex items-center">
+                  <i class="fa-solid fa-sort"></i>
+                  <span class="ml-2 text-base-sm">300</span>
+                </p>
+              </div>
+            </div>
+            <a href="./artWork.html" class="more absolute bottom-8 right-8 hidden bg-white md:group-hover:block"
+              >MORE
+              <div class="corner"></div>
+            </a>
+          </div>
+          <p class="py-4 font-bold lg:border-b font-noto">我這樣有美嗎</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-12 md:mb-20">
+    <div class="container text-center">
+      <h3 class="text-3xl-sm mb-4">Join Us</h3>
+      <h4 class="text-xl mb-8 lg:mb-10 font-bold">創建並出售你的藝術品</h4>
+    </div>
+    <hr class="border-t-4 pb-2 border-b mb-12 md:mb-20"></hr>
+    <div class="container">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-y-12 mb:gap-x-4 lg:gap-x-6">
+        <div class="text-center">
+          <i class="fa-solid fa-wallet mb-4 text-primary text-[40px]"></i>
+          <p class="text-lg font-bold mb-6">設置你的錢包</p>
+          <p>設置好您選擇的錢包後<br>點擊右上角的錢包圖標進行連接</p>
+        </div>
+        <div class="text-center">
+          <i class="fa-solid fa-pen-ruler mb-4 text-primary text-[40px]"></i>
+          <p class="text-lg font-bold mb-6">創建您的主頁</p>
+          <p>註冊成為會員，編輯您的資料 讓大家了解你</p>
+        </div>
+        <div class="text-center">
+          <i class="fa-solid fa-icons mb-4 text-primary text-[40px]"></i>
+          <p class="text-lg font-bold mb-6">添加你的 NFT</p>
+          <p>上傳你的作品<br>添加標題和描述</p>
+        </div>
+        <div class="text-center">
+          <i class="fa-solid fa-tags mb-4 text-primary text-[40px]"></i>
+          <p class="text-lg font-bold mb-6">列出它們出售</p>
+          <p>選擇出售 NFT 的方式<br>並設定價格，等待有緣人</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

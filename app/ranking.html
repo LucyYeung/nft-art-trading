@@ -1,0 +1,643 @@
+---
+title: 市價排行榜
+layout: ./app/layout.ejs
+engine: ejs
+current: ranking
+---
+
+<main>
+  <div class="container">
+    <h2 class="py-6 text-center md:py-12">
+      <span class="text-3xl font-bold">市價排行榜</span><br />
+      <span class="mt-4 md:mt-6">NFT系列藝術作品排行榜！全球注目指標</span>
+    </h2>
+
+    <table class="mb-10 w-full table-auto md:mb-20">
+      <thead class="hidden md:table-header-group">
+        <tr>
+          <td class=""></td>
+          <td class="pl-4 text-left">系列作品名稱</td>
+          <td class="text-right">價值</td>
+          <td class="text-right">24h%</td>
+          <td class="text-right">7d%</td>
+          <td class="text-right">地板價</td>
+          <td class="text-right">擁有者</td>
+          <td class="pr-6 text-right">作品數量</td>
+          <td class="mx-0 w-0 px-0"></td>
+        </tr>
+      </thead>
+      <tbody class="bg-white">
+        <tr class="relative scale-100 border">
+          <td class="table-cell border-r px-2 text-center font-paytone text-2xl-sm">
+            <div class="flex items-center justify-center">1</div>
+          </td>
+          <td class="table-cell truncate py-4 px-2 md:px-4">
+            <img class="mr-2 inline-block h-12 w-12 rounded-full" src="./assets/images/art29.jpg" alt="art29" />
+            <span class="text-sm font-bold md:text-base">追求者送我的花</span>
+          </td>
+          <td class="table-cell">
+            <p class="mr-2 flex items-center justify-end md:mr-0">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">1,774.19</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl text-lightGreen md:table-cell">+220.49%</td>
+          <td class="hidden text-right text-xl text-primary md:table-cell">-2.43%</td>
+          <td class="hidden md:table-cell">
+            <p class="flex items-center justify-end">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">2.90</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl md:table-cell">32.1K</td>
+          <td class="hidden pr-6 text-right text-xl md:table-cell">1000</td>
+          <td class="absolute px-0">
+            <button class="corner corner-black-lg ranking-btn-1 -right-px top-12 h-8 w-8 border-[16px]">
+              <i class="fa-solid fa-plus absolute top-0.5 left-0.5 text-[10px] leading-none text-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr class="ranking-info-1 hidden border border-t-0 bg-white">
+          <td colspan="9" class="p-4">
+            <div class="flex flex-wrap justify-center">
+              <div class="mb-4 flex w-full">
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">24%</p>
+                  <p class="text-xl text-lightGreen">+220.49%</p>
+                </div>
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">7d%</p>
+                  <p class="text-xl text-primary">-2.43%</p>
+                </div>
+                <div class="flex w-1/3 flex-col items-center">
+                  <p class="mb-2 font-noto text-sm">地板價</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-xl">2.90</span>
+                  </p>
+                </div>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">擁有者</p>
+                <p class="text-xl">32.1K</p>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">作品數量</p>
+                <p class="text-xl">1000</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr class="relative scale-100 border">
+          <td class="table-cell border-r px-2 text-center font-paytone text-2xl-sm">
+            <div class="flex items-center justify-center">2</div>
+          </td>
+          <td class="table-cell truncate py-4 px-2 md:px-4">
+            <img class="mr-2 inline-block h-12 w-12 rounded-full" src="./assets/images/art06.jpg" alt="art06" />
+            <span class="text-sm font-bold md:text-base">夏天的時候</span>
+          </td>
+          <td class="table-cell">
+            <p class="mr-2 flex items-center justify-end md:mr-0">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">1,524.89</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl text-lightGreen md:table-cell">+80.49%</td>
+          <td class="hidden text-right text-xl text-primary md:table-cell">-2.43%</td>
+          <td class="hidden md:table-cell">
+            <p class="flex items-center justify-end">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">90.23</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl md:table-cell">32.1K</td>
+          <td class="hidden pr-6 text-right text-xl md:table-cell">1000</td>
+          <td class="absolute px-0">
+            <button class="corner corner-black-lg ranking-btn-2 -right-px top-12 h-8 w-8 border-[16px]">
+              <i class="fa-solid fa-plus absolute top-0.5 left-0.5 text-[10px] leading-none text-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr class="ranking-info-2 hidden border border-t-0 bg-white">
+          <td colspan="9" class="p-4">
+            <div class="flex flex-wrap justify-center">
+              <div class="mb-4 flex w-full">
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">24%</p>
+                  <p class="text-xl text-lightGreen">+80.49%</p>
+                </div>
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">7d%</p>
+                  <p class="text-xl text-primary">-2.43%</p>
+                </div>
+                <div class="flex w-1/3 flex-col items-center">
+                  <p class="mb-2 font-noto text-sm">地板價</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-xl">90.23</span>
+                  </p>
+                </div>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">擁有者</p>
+                <p class="text-xl">32.1K</p>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">作品數量</p>
+                <p class="text-xl">1000</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr class="relative scale-100 border">
+          <td class="table-cell border-r px-2 text-center font-paytone text-2xl-sm">
+            <div class="flex items-center justify-center">3</div>
+          </td>
+          <td class="table-cell truncate py-4 px-2 md:px-4">
+            <img class="mr-2 inline-block h-12 w-12 rounded-full" src="./assets/images/art02.jpg" alt="art02" />
+            <span class="text-sm font-bold md:text-base">海洋波度</span>
+          </td>
+          <td class="table-cell">
+            <p class="mr-2 flex items-center justify-end md:mr-0">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">1,400.59</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl text-primary md:table-cell">-3.92%</td>
+          <td class="hidden text-right text-xl text-primary md:table-cell">-13.43%</td>
+          <td class="hidden md:table-cell">
+            <p class="flex items-center justify-end">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">2.90</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl md:table-cell">32.1K</td>
+          <td class="hidden pr-6 text-right text-xl md:table-cell">1000</td>
+          <td class="absolute px-0">
+            <button class="corner corner-black-lg ranking-btn-3 -right-px top-12 h-8 w-8 border-[16px]">
+              <i class="fa-solid fa-plus absolute top-0.5 left-0.5 text-[10px] leading-none text-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr class="ranking-info-3 hidden border border-t-0 bg-white">
+          <td colspan="9" class="p-4">
+            <div class="flex flex-wrap justify-center">
+              <div class="mb-4 flex w-full">
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">24%</p>
+                  <p class="text-xl text-primary">-3.92%</p>
+                </div>
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">7d%</p>
+                  <p class="text-xl text-primary">-13.43%</p>
+                </div>
+                <div class="flex w-1/3 flex-col items-center">
+                  <p class="mb-2 font-noto text-sm">地板價</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-xl">2.90</span>
+                  </p>
+                </div>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">擁有者</p>
+                <p class="text-xl">32.1K</p>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">作品數量</p>
+                <p class="text-xl">1000</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr class="relative scale-100 border">
+          <td class="table-cell border-r px-2 text-center font-paytone text-2xl-sm">
+            <div class="flex items-center justify-center">4</div>
+          </td>
+          <td class="table-cell truncate py-4 px-2 md:px-4">
+            <img class="mr-2 inline-block h-12 w-12 rounded-full" src="./assets/images/art03.jpg" alt="art03" />
+            <span class="text-sm font-bold md:text-base">賴床真的很不好</span>
+          </td>
+          <td class="table-cell">
+            <p class="mr-2 flex items-center justify-end md:mr-0">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">1,224.88</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl text-primary md:table-cell">-9.23%</td>
+          <td class="hidden text-right text-xl text-primary md:table-cell">-20.43%</td>
+          <td class="hidden md:table-cell">
+            <p class="flex items-center justify-end">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">2.90</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl md:table-cell">32.1K</td>
+          <td class="hidden pr-6 text-right text-xl md:table-cell">1000</td>
+          <td class="absolute px-0">
+            <button class="corner corner-black-lg ranking-btn-4 -right-px top-12 h-8 w-8 border-[16px]">
+              <i class="fa-solid fa-plus absolute top-0.5 left-0.5 text-[10px] leading-none text-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr class="ranking-info-4 hidden border border-t-0 bg-white">
+          <td colspan="9" class="p-4">
+            <div class="flex flex-wrap justify-center">
+              <div class="mb-4 flex w-full">
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">24%</p>
+                  <p class="text-xl text-primary">-9.23%</p>
+                </div>
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">7d%</p>
+                  <p class="text-xl text-primary">-20.43%</p>
+                </div>
+                <div class="flex w-1/3 flex-col items-center">
+                  <p class="mb-2 font-noto text-sm">地板價</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-xl">2.90</span>
+                  </p>
+                </div>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">擁有者</p>
+                <p class="text-xl">32.1K</p>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">作品數量</p>
+                <p class="text-xl">1000</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr class="relative scale-100 border">
+          <td class="table-cell border-r px-2 text-center font-paytone text-2xl-sm">
+            <div class="flex items-center justify-center">5</div>
+          </td>
+          <td class="table-cell truncate py-4 px-2 md:px-4">
+            <img class="mr-2 inline-block h-12 w-12 rounded-full" src="./assets/images/art01.jpg" alt="art01" />
+            <span class="text-sm font-bold md:text-base">瞳孔:流動的脈絡</span>
+          </td>
+          <td class="table-cell">
+            <p class="mr-2 flex items-center justify-end md:mr-0">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">1,021.09</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl text-lightGreen md:table-cell">+83.49%</td>
+          <td class="hidden text-right text-xl text-primary md:table-cell">-1.43%</td>
+          <td class="hidden md:table-cell">
+            <p class="flex items-center justify-end">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">2.90</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl md:table-cell">32.1K</td>
+          <td class="hidden pr-6 text-right text-xl md:table-cell">1000</td>
+          <td class="absolute px-0">
+            <button class="corner corner-black-lg ranking-btn-5 -right-px top-12 h-8 w-8 border-[16px]">
+              <i class="fa-solid fa-plus absolute top-0.5 left-0.5 text-[10px] leading-none text-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr class="ranking-info-5 hidden border border-t-0 bg-white">
+          <td colspan="9" class="p-4">
+            <div class="flex flex-wrap justify-center">
+              <div class="mb-4 flex w-full">
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">24%</p>
+                  <p class="text-xl text-lightGreen">+83.49%</p>
+                </div>
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">7d%</p>
+                  <p class="text-xl text-primary">-1.43%</p>
+                </div>
+                <div class="flex w-1/3 flex-col items-center">
+                  <p class="mb-2 font-noto text-sm">地板價</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-xl">2.90</span>
+                  </p>
+                </div>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">擁有者</p>
+                <p class="text-xl">32.1K</p>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">作品數量</p>
+                <p class="text-xl">1000</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr class="relative scale-100 border">
+          <td class="table-cell border-r px-2 text-center font-paytone text-2xl-sm">
+            <div class="flex items-center justify-center">6</div>
+          </td>
+          <td class="table-cell truncate py-4 px-2 md:px-4">
+            <img class="mr-2 inline-block h-12 w-12 rounded-full" src="./assets/images/art12.jpg" alt="art12" />
+            <span class="text-sm font-bold md:text-base">哭泣的時候</span>
+          </td>
+          <td class="table-cell">
+            <p class="mr-2 flex items-center justify-end md:mr-0">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">921.42</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl text-primary md:table-cell">-9.43%</td>
+          <td class="hidden text-right text-xl text-lightGreen md:table-cell">+183.49%</td>
+          <td class="hidden md:table-cell">
+            <p class="flex items-center justify-end">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">2.90</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl md:table-cell">32.1K</td>
+          <td class="hidden pr-6 text-right text-xl md:table-cell">1000</td>
+          <td class="absolute px-0">
+            <button class="corner corner-black-lg ranking-btn-6 -right-px top-12 h-8 w-8 border-[16px]">
+              <i class="fa-solid fa-plus absolute top-0.5 left-0.5 text-[10px] leading-none text-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr class="ranking-info-6 hidden border border-t-0 bg-white">
+          <td colspan="9" class="p-4">
+            <div class="flex flex-wrap justify-center">
+              <div class="mb-4 flex w-full">
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">24%</p>
+                  <p class="text-xl text-primary">-9.43%</p>
+                </div>
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">7d%</p>
+                  <p class="text-xl text-lightGreen">+183.49%</p>
+                </div>
+                <div class="flex w-1/3 flex-col items-center">
+                  <p class="mb-2 font-noto text-sm">地板價</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-xl">2.90</span>
+                  </p>
+                </div>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">擁有者</p>
+                <p class="text-xl">32.1K</p>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">作品數量</p>
+                <p class="text-xl">1000</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr class="relative scale-100 border">
+          <td class="table-cell border-r px-2 text-center font-paytone text-2xl-sm">
+            <div class="flex items-center justify-center">7</div>
+          </td>
+          <td class="table-cell truncate py-4 px-2 md:px-4">
+            <img class="mr-2 inline-block h-12 w-12 rounded-full" src="./assets/images/art14.jpg" alt="art14" />
+            <span class="text-sm font-bold md:text-base">破碎的菠蘿麵包</span>
+          </td>
+          <td class="table-cell">
+            <p class="mr-2 flex items-center justify-end md:mr-0">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">888.88</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl text-lightGreen md:table-cell">+20.49%</td>
+          <td class="hidden text-right text-xl text-primary md:table-cell">-0.43%</td>
+          <td class="hidden md:table-cell">
+            <p class="flex items-center justify-end">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">2.90</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl md:table-cell">32.1K</td>
+          <td class="hidden pr-6 text-right text-xl md:table-cell">1000</td>
+          <td class="absolute px-0">
+            <button class="corner corner-black-lg ranking-btn-7 -right-px top-12 h-8 w-8 border-[16px]">
+              <i class="fa-solid fa-plus absolute top-0.5 left-0.5 text-[10px] leading-none text-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr class="ranking-info-7 hidden border border-t-0 bg-white">
+          <td colspan="9" class="p-4">
+            <div class="flex flex-wrap justify-center">
+              <div class="mb-4 flex w-full">
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">24%</p>
+                  <p class="text-xl text-lightGreen">+20.49%</p>
+                </div>
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">7d%</p>
+                  <p class="text-xl text-primary">-0.43%</p>
+                </div>
+                <div class="flex w-1/3 flex-col items-center">
+                  <p class="mb-2 font-noto text-sm">地板價</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-xl">2.90</span>
+                  </p>
+                </div>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">擁有者</p>
+                <p class="text-xl">32.1K</p>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">作品數量</p>
+                <p class="text-xl">1000</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr class="relative scale-100 border">
+          <td class="table-cell border-r px-2 text-center font-paytone text-2xl-sm">
+            <div class="flex items-center justify-center">8</div>
+          </td>
+          <td class="table-cell truncate py-4 px-2 md:px-4">
+            <img class="mr-2 inline-block h-12 w-12 rounded-full" src="./assets/images/art08.jpg" alt="art08" />
+            <span class="text-sm font-bold md:text-base">人生中的貓咪們</span>
+          </td>
+          <td class="table-cell">
+            <p class="mr-2 flex items-center justify-end md:mr-0">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">770.23</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl text-lightGreen md:table-cell">+32.49%</td>
+          <td class="hidden text-right text-xl text-lightGreen md:table-cell">+30.23%</td>
+          <td class="hidden md:table-cell">
+            <p class="flex items-center justify-end">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">2.90</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl md:table-cell">32.1K</td>
+          <td class="hidden pr-6 text-right text-xl md:table-cell">1000</td>
+          <td class="absolute px-0">
+            <button class="corner corner-black-lg ranking-btn-8 -right-px top-12 h-8 w-8 border-[16px]">
+              <i class="fa-solid fa-plus absolute top-0.5 left-0.5 text-[10px] leading-none text-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr class="ranking-info-8 hidden border border-t-0 bg-white">
+          <td colspan="9" class="p-4">
+            <div class="flex flex-wrap justify-center">
+              <div class="mb-4 flex w-full">
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">24%</p>
+                  <p class="text-xl text-lightGreen">+32.49%</p>
+                </div>
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">7d%</p>
+                  <p class="text-xl text-lightGreen">+30.23%</p>
+                </div>
+                <div class="flex w-1/3 flex-col items-center">
+                  <p class="mb-2 font-noto text-sm">地板價</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-xl">2.90</span>
+                  </p>
+                </div>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">擁有者</p>
+                <p class="text-xl">32.1K</p>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">作品數量</p>
+                <p class="text-xl">1000</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr class="relative scale-100 border">
+          <td class="table-cell border-r px-2 text-center font-paytone text-2xl-sm">
+            <div class="flex items-center justify-center">9</div>
+          </td>
+          <td class="table-cell truncate py-4 px-2 md:px-4">
+            <img class="mr-2 inline-block h-12 w-12 rounded-full" src="./assets/images/art28.jpg" alt="art28" />
+            <span class="text-sm font-bold md:text-base">髒兮兮的家</span>
+          </td>
+          <td class="table-cell">
+            <p class="mr-2 flex items-center justify-end md:mr-0">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">502.31</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl text-lightGreen md:table-cell">+13.49%</td>
+          <td class="hidden text-right text-xl text-lightGreen md:table-cell">+50.23%</td>
+          <td class="hidden md:table-cell">
+            <p class="flex items-center justify-end">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">2.90</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl md:table-cell">32.1K</td>
+          <td class="hidden pr-6 text-right text-xl md:table-cell">1000</td>
+          <td class="absolute px-0">
+            <button class="corner corner-black-lg ranking-btn-9 -right-px top-12 h-8 w-8 border-[16px]">
+              <i class="fa-solid fa-plus absolute top-0.5 left-0.5 text-[10px] leading-none text-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr class="ranking-info-9 hidden border border-t-0 bg-white">
+          <td colspan="9" class="p-4">
+            <div class="flex flex-wrap justify-center">
+              <div class="mb-4 flex w-full">
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">24%</p>
+                  <p class="text-xl text-lightGreen">+13.49%</p>
+                </div>
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">7d%</p>
+                  <p class="text-xl text-lightGreen">+50.23%</p>
+                </div>
+                <div class="flex w-1/3 flex-col items-center">
+                  <p class="mb-2 font-noto text-sm">地板價</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-xl">2.90</span>
+                  </p>
+                </div>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">擁有者</p>
+                <p class="text-xl">32.1K</p>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">作品數量</p>
+                <p class="text-xl">1000</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr class="relative scale-100 border">
+          <td class="table-cell border-r px-2 text-center font-paytone text-2xl-sm">
+            <div class="flex items-center justify-center">10</div>
+          </td>
+          <td class="table-cell truncate py-4 px-2 md:px-4">
+            <img class="mr-2 inline-block h-12 w-12 rounded-full" src="./assets/images/art16.jpg" alt="art16" />
+            <span class="text-sm font-bold md:text-base">細胞小將</span>
+          </td>
+          <td class="table-cell">
+            <p class="mr-2 flex items-center justify-end md:mr-0">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">420.20</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl text-lightGreen md:table-cell">+54.49%</td>
+          <td class="hidden text-right text-xl text-primary md:table-cell">-12.43%</td>
+          <td class="hidden md:table-cell">
+            <p class="flex items-center justify-end">
+              <i class="fa-solid fa-sort"></i>
+              <span class="ml-2 text-xl">2.90</span>
+            </p>
+          </td>
+          <td class="hidden text-right text-xl md:table-cell">32.1K</td>
+          <td class="hidden pr-6 text-right text-xl md:table-cell">1000</td>
+          <td class="absolute px-0">
+            <button class="corner corner-black-lg ranking-btn-10 -right-px top-12 h-8 w-8 border-[16px]">
+              <i class="fa-solid fa-plus absolute top-0.5 left-0.5 text-[10px] leading-none text-white"></i>
+            </button>
+          </td>
+        </tr>
+        <tr class="ranking-info-10 hidden border border-t-0 bg-white">
+          <td colspan="9" class="p-4">
+            <div class="flex flex-wrap justify-center">
+              <div class="mb-4 flex w-full">
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">24%</p>
+                  <p class="text-xl text-lightGreen">+54.49%</p>
+                </div>
+                <div class="w-1/3 text-center">
+                  <p class="mb-2 font-noto text-sm">7d%</p>
+                  <p class="text-xl text-primary">-12.43%</p>
+                </div>
+                <div class="flex w-1/3 flex-col items-center">
+                  <p class="mb-2 font-noto text-sm">地板價</p>
+                  <p class="flex items-center">
+                    <i class="fa-solid fa-sort"></i>
+                    <span class="ml-2 text-xl">2.90</span>
+                  </p>
+                </div>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">擁有者</p>
+                <p class="text-xl">32.1K</p>
+              </div>
+              <div class="w-1/3 text-center">
+                <p class="mb-2 font-noto text-sm">作品數量</p>
+                <p class="text-xl">1000</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
