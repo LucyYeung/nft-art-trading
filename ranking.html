@@ -1,10 +1,91 @@
----
-title: 市價排行榜
-layout: ./app/layout.ejs
-engine: ejs
-current: ranking
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>市價排行榜</title>
+    <script src="https://kit.fontawesome.com/10a86a4821.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
+    <link rel="stylesheet" href="./assets/style/all.css" />
+  </head>
+
+  <body class="bg-secondary">
+    <header class="sticky top-0 z-20 border-b bg-secondary">
+      <div class="container">
+        <div class="flex h-[50px] items-center justify-between lg:h-[104px]">
+          <h1 class="logo">
+            <a
+              href="./index.html"
+              class="block h-[18px] w-[85px] overflow-hidden whitespace-nowrap bg-logo bg-contain bg-no-repeat indent-[101%] lg:h-10 lg:w-[190px]"
+            >
+              ART NFT
+            </a>
+          </h1>
+          <div class="search-input hidden items-center">
+            <button class="search-back hover:text-primary">
+              <i class="fa-solid fa-angle-left mr-4"></i>
+            </button>
+            <input
+              type="text"
+              class="w-64 border-0 bg-transparent px-0 placeholder:text-darkGray focus:ring-0"
+              placeholder="搜尋作品名稱、藝術家名稱"
+            />
+          </div>
+          <div class="flex justify-between gap-6 lg:hidden">
+            <button class="search hover:text-primary">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button class="menu hover:text-primary">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <button class="close hidden hover:text-primary">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="hidden h-full items-center divide-x lg:flex">
+            <div class="flex h-full items-center border-l px-12">
+              <input
+                type="text"
+                class="mr-6 w-72 border-0 bg-transparent px-0 placeholder:text-darkGray focus:ring-0"
+                placeholder="搜尋作品名稱、藝術家名稱"
+              />
+              <button class="hover:text-primary">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+            <div class="flex h-full items-center">
+              <a href="./explore.html" class="px-8 py-4 hover:text-primary xl:px-12">探索</a>
+            </div>
+            <div class="flex h-full items-center">
+              <a href="./ranking.html" class="px-8 py-4 hover:text-primary xl:px-12">市值</a>
+            </div>
+            <div class="flex h-full items-center">
+              <button class="px-8 py-4 hover:text-primary xl:px-12" data-modal-toggle="crypto-modal">
+                <i class="fa-solid fa-wallet"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu hidden border-t bg-white md:hidden">
+        <div class="container pb-6">
+          <a href="./explore.html" class="my-2 block w-full border-b py-4 text-center text-lg font-bold">探索</a>
+          <a href="./ranking.html" class="my-2 block w-full py-4 text-center text-lg font-bold">市值</a>
+          <button class="block w-full bg-primary py-4 text-center text-lg font-bold text-white" data-modal-toggle="crypto-modal">連結錢包</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="relative">
+      
 <main>
   <div class="container">
     <h2 class="py-6 text-center md:py-12">
@@ -641,3 +722,124 @@ current: ranking
     </table>
   </div>
 </main>
+
+
+      <footer class="border-t pt-2">
+        <div class="border-t-4 px-3 py-6">
+          <p class="text-center font-noto">© ART NFT. All Rights Reserved</p>
+        </div>
+      </footer>
+      <div class="mask absolute top-0 left-0 z-10 hidden h-full w-full bg-black opacity-65"></div>
+    </div>
+
+    <!-- Wallet modal -->
+    <div
+      id="crypto-modal"
+      tabindex="-1"
+      class="fixed top-0 right-0 left-0 z-50 hidden h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden bg-black bg-opacity-65 md:inset-0"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="relative h-full w-full p-0 md:h-auto md:max-w-md md:p-4">
+        <!-- Modal content -->
+        <div class="relative flex h-full w-full flex-col items-stretch justify-between bg-white shadow">
+          <button
+            type="button"
+            class="absolute top-3 right-2.5 ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 hover:text-primary"
+            data-modal-toggle="crypto-modal"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <!-- Modal header -->
+          <div>
+            <div class="border-b py-4">
+              <p class="text-center text-xl">連結你的錢包</p>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col items-center justify-between bg-white py-6 px-4">
+              <ul class="grid w-full gap-2 md:grid-cols-2">
+                <li class="relative">
+                  <input type="radio" id="MetaMask" name="crypto" value="MetaMask" class="peer hidden" required />
+                  <label for="MetaMask" class="group flex cursor-pointer justify-between border border-black p-4 peer-checked:border-primary">
+                    <div class="flex gap-x-4">
+                      <img class="h-4 w-4" src="./assets/images/logo/connect01.png" alt="connect01" />
+                      <p class="text-base-sm">MetaMask</p>
+                    </div>
+                  </label>
+                  <i class="fa-solid fa-check absolute right-4 top-1/2 hidden -translate-y-1/2 text-primary peer-checked:block"></i>
+                </li>
+                <li class="relative">
+                  <input type="radio" id="Coinbase Wallet" name="crypto" value="Coinbase Wallet" class="peer hidden" />
+                  <label for="Coinbase Wallet" class="group flex cursor-pointer justify-between border border-black p-4 peer-checked:border-primary">
+                    <div class="flex gap-x-4">
+                      <img class="h-4 w-4" src="./assets/images/logo/connect02.png" alt="connect02" />
+                      <p class="text-base-sm">Coinbase Wallet</p>
+                    </div>
+                  </label>
+                  <i class="fa-solid fa-check absolute right-4 top-1/2 hidden -translate-y-1/2 text-primary peer-checked:block"></i>
+                </li>
+                <li class="relative">
+                  <input type="radio" id="WalletConnect" name="crypto" value="WalletConnect" class="peer hidden" />
+                  <label for="WalletConnect" class="group flex cursor-pointer justify-between border border-black p-4 peer-checked:border-primary">
+                    <div class="flex gap-x-4">
+                      <img class="h-4 w-4" src="./assets/images/logo/connect03.png" alt="connect03" />
+                      <p class="text-base-sm">WalletConnect</p>
+                    </div>
+                  </label>
+                  <i class="fa-solid fa-check absolute right-4 top-1/2 hidden -translate-y-1/2 text-primary peer-checked:block"></i>
+                </li>
+                <li class="relative">
+                  <input type="radio" id="Phantom" name="crypto" value="Phantom" class="peer hidden" />
+                  <label for="Phantom" class="group flex cursor-pointer justify-between border border-black p-4 peer-checked:border-primary">
+                    <div class="flex gap-x-4">
+                      <img class="h-4 w-4" src="./assets/images/logo/connect04.png" alt="connect04" />
+                      <p class="text-base-sm">Phantom</p>
+                    </div>
+                  </label>
+                  <i class="fa-solid fa-check absolute right-4 top-1/2 hidden -translate-y-1/2 text-primary peer-checked:block"></i>
+                </li>
+                <li class="relative">
+                  <input type="radio" id="Glow" name="crypto" value="Glow" class="peer hidden" />
+                  <label for="Glow" class="group flex cursor-pointer justify-between border border-black p-4 peer-checked:border-primary">
+                    <div class="flex gap-x-4">
+                      <img class="h-4 w-4" src="./assets/images/logo/connect05.png" alt="connect05" />
+                      <p class="text-base-sm">Glow</p>
+                    </div>
+                  </label>
+                  <i class="fa-solid fa-check absolute right-4 top-1/2 hidden -translate-y-1/2 text-primary peer-checked:block"></i>
+                </li>
+                <li class="relative">
+                  <input type="radio" id="Fortmatic" name="crypto" value="Fortmatic" class="peer hidden" />
+                  <label for="Fortmatic" class="group flex cursor-pointer justify-between border border-black p-4 peer-checked:border-primary">
+                    <div class="flex gap-x-4">
+                      <img class="h-4 w-4" src="./assets/images/logo/connect06.png" alt="connect06" />
+                      <p class="text-base-sm">Fortmatic</p>
+                    </div>
+                  </label>
+                  <i class="fa-solid fa-check absolute right-4 top-1/2 hidden -translate-y-1/2 text-primary peer-checked:block"></i>
+                </li>
+              </ul>
+            </div>
+            <div class="flex justify-center bg-white">
+              <button
+                type="button"
+                class="wallet-close m-4 mt-0 block w-full border bg-primary py-2 text-lg text-white md:w-[168px]"
+                data-modal-toggle="crypto-modal"
+              >
+                連結錢包
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/flowbite.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+</html>
