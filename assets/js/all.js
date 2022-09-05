@@ -1,13 +1,17 @@
 "use strict";
 
 $(".search, .search-back").on("click", function () {
-  $(".search-input, .menu, .logo").toggle("hidden");
+  if ($(".menu-list").is(":hidden")) {
+    $(".search-input, .menu, .logo").toggle("hidden");
+  } else {
+    $(".mask, .menu-list, .close, .logo, .search-input").toggle("hidden");
+  }
 });
 $(".menu").on("click", function () {
-  $(".mask, .menu, .close").toggle("hidden");
+  $(".mask, .menu, .menu-list, .close").toggle("hidden");
 });
 $(".close").on("click", function () {
-  $(".close, .menu, .mask").toggle("hidden");
+  $(".close, .menu, .menu-list, .mask").toggle("hidden");
 });
 var num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 num.forEach(function (value) {
